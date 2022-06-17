@@ -46,7 +46,7 @@ sh "${mavenHome}/bin/mvn clean package"
 }
 stage('TriggerDownstreamJob')
 {
-build job 'pipelinesscriptwithbuildparameters'
+build job:'pipelinesscriptwithbuildparameters'
 }
 /*
 stage('ExecuteSonarQubeReport')
