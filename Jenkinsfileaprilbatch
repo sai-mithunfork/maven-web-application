@@ -43,7 +43,10 @@ stage('Build')
 {
 sh "${mavenHome}/bin/mvn clean package"
 //if you installed mvn in window then we need to use "bat" in the place of sh 
-
+}
+stage('TriggerDownstreamJob')
+{
+build job 'pipelinesscriptwithbuildparameters'
 }
 /*
 stage('ExecuteSonarQubeReport')
