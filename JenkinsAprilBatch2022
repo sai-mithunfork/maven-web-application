@@ -3,10 +3,10 @@ echo "Node name is : ${env.NODE_NAME}"
 echo "Build number is : ${env.BUILD_NUMBER}"
 pipeline
 {
-//agent any
-agent{
+agent any
+/*agent{
         label 'nodes'
-    }
+    }*/
 tools{
 maven "maven3.8.4"
 }
